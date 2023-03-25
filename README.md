@@ -1,5 +1,7 @@
 # TwitterClone
 
+A simple twitter clone made with Phoenix Live View and Elixir!!!
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
