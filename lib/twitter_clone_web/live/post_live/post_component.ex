@@ -4,6 +4,7 @@ defmodule TwitterCloneWeb.PostLive.PostComponent do
    @impl true
    def render(assigns) do
      ~H"""
+
        <div id={"post-#{@post.id}"} class="post">
          <div class="row">
            <div class="column column-10 post-avatar">

@@ -1,41 +1,47 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
-  <p>Peace of mind from prototype to production</p>
-</section>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
-    <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.6/CHANGELOG.md">v1.6 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://web.libera.chat/#elixir">#elixir on Libera Chat (IRC)</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-      <li>
-        <a href="https://elixir-slackin.herokuapp.com/">Elixir on Slack</a>
-      </li>
-      <li>
-        <a href="https://discord.gg/elixir">Elixir on Discord</a>
-      </li>
-    </ul>
-  </article>
-</section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Twitter</title>
+ <!-- <link rel="stylesheet" href="./assets/twitter_clone.css"> -->
+</head>
+
+<body>
+
+  <header class="container-twitter">
+    <div class="logo">
+      <img src="./images/twitter-logo.png" alt="Logo do Twitter">
+    </div>
+  </header>
+
+  <main class="container-twitter">
+    <h1>Log In Twitter Clone</h1>
+    <div class="container-twitter">
+      <form class="">
+        <div class="inputs">
+          <label class="usuario" for="usuario">phone, e-mail or user name</label><br>
+          <input type="text" id="usuario">
+        </div>
+        <div class="inputs">
+          <label class="senha" for="senha">Password</label><br>
+          <input type="password" id="senha">
+        </div>
+        <br>
+        <div class="button">
+          <a href="posts"><%= gettext "%{name}", name: "Login" %></a>
+        </div>
+
+
+      </form>
+      <div class="links container">
+        <a target="_blank" href="https://twitter.com/login?lang=pt">Forget password?</a>
+        <span class="ponto"></span>
+        <a target="_blank" href="https://twitter.com/login?lang=pt">Subscribe on Twitter</a>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

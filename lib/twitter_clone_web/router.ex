@@ -25,6 +25,7 @@ defmodule TwitterCloneWeb.Router do
     live "/posts/:id/show/edit", PostLive.Show, :edit
 
     get "/", PageController, :index
+    resources "/posts", PostsController
 
 
   end

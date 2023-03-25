@@ -1,11 +1,15 @@
 /* This file is for your main application CSS */
-@import "./phoenix.css";
-@import "./twitter_clone.css";
-
-
+@import url(./phoenix.css);
+@import url(./twitter_clone.css);
 .twitter-clone .retweet {
   width: 58px;
   height: 58px;
+}
+
+.title-post {
+  margin-top: 50px;
+  font-size: 3rem;
+  font-weight: 300;
 }
 
 /* Alerts and form errors used by phx.new */
