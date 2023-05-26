@@ -5,23 +5,23 @@ import Config
 # The MIX_TEST_PARTITION environment variable can be used
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
-config :reg_user, RegUser.Repo,
+config :twitter_clone, TwitterClone.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "postgres123",
   hostname: "localhost",
-  database: "reg_user_test#{System.get_env("MIX_TEST_PARTITION")}",
+  database: "twitter_clone_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :reg_user, RegUserWeb.Endpoint,
+config :twitter_clone, TwitterCloneWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "xwmKBdWcjz31e/oedadBh/X/oPjOKtuZQm6FgztmUiKPAPqg50LboaIvNWnq4rVx",
+  secret_key_base: "BHR6PX//Sdlc76Q2wUzvet+cNccf8H9PRymPv88Uam2CgUSOXjjsg+NLlybFOACb",
   server: false
 
 # In test we don't send emails.
-config :reg_user, RegUser.Mailer, adapter: Swoosh.Adapters.Test
+config :twitter_clone, TwitterClone.Mailer, adapter: Swoosh.Adapters.Test
 
 # Print only warnings and errors during test
 config :logger, level: :warn
