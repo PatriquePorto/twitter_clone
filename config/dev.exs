@@ -1,11 +1,11 @@
 import Config
 
 # Configure your database
-config :twitter_clone, TwitterClone.Repo,
+config :reg_user, RegUser.Repo,
   username: "postgres",
   password: "postgres123",
   hostname: "localhost",
-  database: "twitter_clone_dev",
+  database: "reg_user_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -16,14 +16,14 @@ config :twitter_clone, TwitterClone.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
-config :twitter_clone, TwitterCloneWeb.Endpoint,
+config :reg_user, RegUserWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "dKbXh6dg3z/GY1nr0FyxlXsVq8tGv/d0YZEPt0Zglc7vzbdDjXVCZJtWBozxfyNl",
+  secret_key_base: "OevMgaMHZOYbb0WfLdZ7UgdxyPAVJf3e4BvUl54y6kW66vu66Rt8OL/KT2KHWEGk",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
@@ -54,13 +54,13 @@ config :twitter_clone, TwitterCloneWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :twitter_clone, TwitterCloneWeb.Endpoint,
+config :reg_user, RegUserWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/twitter_clone_web/(live|views)/.*(ex)$",
-      ~r"lib/twitter_clone_web/templates/.*(eex)$"
+      ~r"lib/reg_user_web/(live|views)/.*(ex)$",
+      ~r"lib/reg_user_web/templates/.*(eex)$"
     ]
   ]
 

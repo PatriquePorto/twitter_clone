@@ -7,15 +7,15 @@
 # General application configuration
 import Config
 
-config :twitter_clone,
-  ecto_repos: [TwitterClone.Repo]
+config :reg_user,
+  ecto_repos: [RegUser.Repo]
 
 # Configures the endpoint
-config :twitter_clone, TwitterCloneWeb.Endpoint,
+config :reg_user, RegUserWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: TwitterCloneWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: TwitterClone.PubSub,
-  live_view: [signing_salt: "ThmTEhPf"]
+  render_errors: [view: RegUserWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: RegUser.PubSub,
+  live_view: [signing_salt: "ytLjUJbT"]
 
 # Configures the mailer
 #
@@ -24,7 +24,7 @@ config :twitter_clone, TwitterCloneWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :twitter_clone, TwitterClone.Mailer, adapter: Swoosh.Adapters.Local
+config :reg_user, RegUser.Mailer, adapter: Swoosh.Adapters.Local
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false
